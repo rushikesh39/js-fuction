@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Day 1</h1>
+    <h3>
+      Q1:-Create one function with zero parameter having a console statement;
+    </h3>
+    <pre>
+        function myfunction(){
+            console.log("Hello Rushikesh!!!");
+        }
+        myfunction();
+    </pre>
+    <hr />
+
+
+    <h3>Q2:-Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</h3>
+    <pre>
+        function sum(a, b){
+            console.log(a+b);
+        }
+        sum(3,4);
+        //output 7
+    </pre>
+    <hr>
+    <h3>
+        Q3:-Create one arrow function.
+    </h3>
+    <pre>
+        const arrow=()=>{
+            console.log("Arrow funtion!!!!!")
+        }
+        arrow()
+    </pre>
+    <hr>
+    <h3>Q4:-</h3>
+    <pre>
+        var x = 21;
+        var girl = function () {
+            console.log(x);
+            var x = 20;
+        };
+        girl ();
+        
+    </pre>
+    <p>
+      <b> output is undefined .</b>
+
+      This is because the var declaration for x inside the function , but the
+      value of x is not assigned until later in the function. So when the
+      function is initially executed, the value of x is undefined.
+    </p>
+    <h3>Q5:-</h3>
+    <pre>
+        "Print output: 
+        var x = 21;
+        girl ();
+        console.log(x)
+        function girl() {
+            console.log(x);
+            var x = 20;
+        };
+        "
+    </pre>
+    <p>
+         girl() function is called before  declaration, the console.log(x) statement inside the function gets the top, but the variable declaration var x = 20 is after the console. then the console.log(x) statement is executed within the function <b>then the output of inside console is undefined</b>.
+        <br>
+        console.log(x) statement is executed outside the function, it is global variable x which has a value of 21. Therefore, 21 is print in the console.
+    </p>
+    <hr>
+    <h3>Q6:-</h3>
+    <pre>
+        "Print output
+
+        var x = 21;
+        a();
+        b();
+        
+          function a() {
+            
+           x = 20;
+          console.log(x);
+        };
+         function b() {
+            
+            x = 40;
+           console.log(x);
+        };"
+    </pre>
+    <p>
+        <b>Output:- function a->20 and function b->40</b>
+        <br>
+        This is because the x variable is declared in the global scope and then assigned the value of 20 in the a() function. When b() is called next, the value of x is updated to 40 before the console.
+    </p>
+    <hr>
+    <h3>Q7:-Write a function that accepts parameter n and returns factorial of n</h3>
+    <pre>
+        function factorial(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+              result *= i;
+            }
+            console.log("factorial",result);
+          }
+          
+          factorial(5);
+
+          //output:- factorial 120
+    </pre>
+    <hr>
+    <hr>
+    <hr>
+    <h1>Day 2</h1>
+    <h3>
+        Q1:-
+    </h3>
+    <pre>
+        "Guess the Output
+
+        function FindSum(a, b){
+            return a + b;
+        }
+        
+        function DisplayData(data, batch){
+            console.log(`i am from ${data} and My batch is EA${batch}`)
+        }
+        
+        DisplayData("PrepBytes", FindSum(10, 9));"
+    </pre>
+    <p>
+        <b>output:-i am from PrepBytes and My batch is EA19</b>
+        <br>
+        The code you provided defines a function FindSum that takes in two parameters a and b and returns their sum. Another function DisplayData is defined, which takes in two parameters data and batch and  console that includes the passed in values of data and batch along with some text.
+
+        The last line  DisplayData function with the  "PrepBytes" as the data parameter and the result of calling the FindSum function with arguments 10 and 9 as the batch parameter.
+    </p>
+    <hr>
+    <h3>
+        Q2:-
+    </h3>
+    <pre>
+        "Guess the output
+
+        Abc();
+        const Abc = function(){
+            let value = 20;
+            console.log(value);
+        }"
+    </pre>
+    <p>
+        The code will throw a ReferenceError because the Abc variable is accessed before it is declared. When the Abc() function is call, Abc is not yet defined and hence JavaScript will throw a Error: Cannot access 'Abc' before initialization.
+    </p>
+    <hr>
+    <h3>
+        Q3:-
+    </h3>
+    <pre>
+        "Guess the output
+
+        var a = 10;
+        (function (){
+            console.log(a);
+            var a = 20;
+        })();"
+    </pre>
+    <p>
+        The console.log(a) statement is executed before the value of a is set to 20, so it logs undefined to the console.
+    </p>
+    <hr>
+    <h3>
+        Q4:-
+    </h3>
+    <pre>
+        "Guess the Output
+        const greet =  function(name){
+            return function(m){
+            
+                console.log(`Hi!! ${name}, ${m}`);
+            }
+        }
+          
+        const greet_message = greet('EA19');
+        greet_message("Welcome To PrepBytes");"
+    </pre>
+    <p>
+       <b> The output of the code will be Hi!! EA19, Welcome To PrepBytes.</b>
+
+    In this code, greet is a function that returns another function, which when invoked logs a message to the console. When greet is called with the argument 'EA19', it returns a function that remembers the value of 'EA19', and that function is assigned to the variable greet_message.
+
+    When greet_message(""Welcome To PrepBytes"") is called, it invokes the function that was returned by greet(), passing it the argument "Welcome To PrepBytes".
+    </p>
+    <hr>
+    <script src="./main.js"></script>
+  </body>
+</html>
